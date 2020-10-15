@@ -49878,8 +49878,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Lenovo\Desktop\projects\php\cine\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Lenovo\Desktop\projects\php\cine\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /media/usrx/DEV/tec/fp4a/cine/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /media/usrx/DEV/tec/fp4a/cine/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

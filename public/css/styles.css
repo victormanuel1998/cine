@@ -1,0 +1,19 @@
+.imagenCard {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 40%;
+}
+
+.loginCard {
+    padding-top: 50px;
+}
+
+.alinearCentro {
+    alignment: center;
+}
+
+.cardplus {
+    box-shadow: #1b1e21;
+    /*background-color: #b3b7bb;*/
+    background-image: url('public/img/3.jpg');
+}
