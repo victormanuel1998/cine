@@ -27,7 +27,7 @@
             </div>
             <div>
                 <label for="">CANTIDAD:</label>
-                <input class="form-control" type="number"value="{{ $consumable->quantity }}" name="quanty" id="" required maxlength="100">
+                <input class="form-control" type="number"value="{{ $consumable->quantity }}" name="quantity" id="" required maxlength="100">
             </div>
             <br><br>
 
