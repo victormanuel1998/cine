@@ -2,6 +2,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
     width: 40%;
+
 }
 
 .loginCard {
@@ -13,7 +14,15 @@
 }
 
 .cardplus {
+    background: #8ec214;
+    border-radius: 5px;
     box-shadow: #1b1e21;
-    /*background-color: #b3b7bb;*/
-    background-image: url('public/img/3.jpg');
+    background-image: -webkit-linear-gradient(right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
 }
+body {
+          background: #1581acb6;
+          
+          
+      }
+      
+      

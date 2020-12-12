@@ -13,7 +13,9 @@ class Movie extends Model
         'director',
         'duration',
         'actors',
-        'genre'
+        'genre',
+        'created_at',
+        'updated_at'
 
     ];
 }

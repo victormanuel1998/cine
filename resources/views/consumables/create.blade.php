@@ -5,14 +5,14 @@
      <div class="row">
         <div class="col-sm-10"><h1>Agregar articulos<h1></div>
         <div class="col-sm-2">
-            <a href="{{ route('consumables.index') }}">
+            <a href="{{ route('consumablesindex') }}">
                 <button class="btn btn-secondary">Cancelar</button>
             </a>
         </div>
     </div>
 
 
-    <div class="jumbotron">
+    <div class="col-6">
         <form method="post" action="{{ route('consumables.store') }}">
             @csrf
 
@@ -30,7 +30,7 @@
             </div>
             <br><br>
 
-            <input class="btn btn-primary" type="submit" value="Guardar">
+            <input class="btn btn-success" type="submit" value="Guardar">
 
         </form>
     </div>

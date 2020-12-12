@@ -15,7 +15,7 @@
     </div>
 
 
-    <div class="jumbotron">
+    <div class="col-8">
         <form method="post" action="{{ route('rooms.store') }}">
             @csrf
 
@@ -34,7 +34,7 @@
         
             <br><br>
 
-            <input class="btn btn-primary" type="submit" value="Guardar">
+            <input class="btn btn-danger" type="submit" value="Guardar">
 
         </form>
     </div>

@@ -11,8 +11,10 @@
         </div>
     </div>
 
-
-    <div class="jumbotron">
+yaaaaa
+me estan llamando
+si yo tambien listo que mas quieres?checa lo de las graficas
+    <div class="col-8">
         <form method="post" action="{{ route('movies.store') }}">
             @csrf
 
@@ -23,6 +25,10 @@
             <div>
                 <label for="">Sinopsis:</label>
                 <textarea class="form-control" name="synopsis" id="" cols="30" rows="5"></textarea>
+            </div>
+            <div>
+                <label for="">Categria:</label>
+                <input type="text" class="form-control" name="category" id="" required maxlength="100">
             </div>
             <div>
                 <label for="">Director:</label>
@@ -51,10 +57,13 @@
                     <option value="0">No disponible</option>
                 </select>
             </div>
-
+            <div>
+                <label for="">Actor:</label>
+                <input class="form-control" type="text" name="actors" id="" required maxlength="100">
+            </div>
             <br><br>
 
-            <input class="btn btn-primary" type="submit" value="Guardar">
+            <input class="btn btn-danger" type="submit" value="Guardar">
 
         </form>
     </div>

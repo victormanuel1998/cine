@@ -15,7 +15,7 @@
     </div>
 
 
-    <div class="jumbotron">
+    <div class="col-8">
         <form method="post" action="{{ route('entrances.store') }}">
             @csrf
 
@@ -25,13 +25,13 @@
             </div>
             <div>
                 <label for="">Hora de entrada:</label>
-                <textarea class="form-control" name="hourEntrance" id="" cols="30" rows="5"></textarea>
+                <input class="form-control" type="datetime-local" name="hourEntrance" id="" required>
             </div>
         
 
             <br><br>
 
-            <input class="btn btn-primary" type="submit" value="Guardar">
+            <input class="btn btn-danger" type="submit" value="Guardar">
 
         </form>
     </div>

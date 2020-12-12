@@ -3,8 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Entrance;
+
+
+use Barryvdh\DomPDF\Facade;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\EntranceExport;
 
 class EntranceController extends Controller
 {
@@ -95,4 +101,35 @@ class EntranceController extends Controller
         $entrance->delete();
         return redirect()->route('entrances.index');
     }
+    public function exportPDF()
+    {
+        //aqui cambiaras loque es la varaible y el modelo que usas de ahi todo es igual
+        $entrances = Entrance::get();
+        //de porsi marca error
+        $pdf = Facade::loadView('entrances.exportPDF', compact('entrances'));
+        //línea para descargar PDF directamente
+        //return $pdf->download('proveedores.pdf');
+        $pdf->setPaper('x4', 'landscape');
+        //linea para descargar PDF con autorización del usuario
+        return $pdf->stream();
+
+        //para cambiar a horizontal la hoja
+        //$pdf->setPaper('x4','landscape');
+        //return $pdf->stream(); 
+
+    }
+    public function exportToXls(){
+        $entrances = Entrance::get();
+        return Excel::download(new EntranceExport, 'entrances.xlsx');
+    
+    }
+    public function exportToCsv(){
+    
+        return Excel::download(new EntranceExport, 'entrances.csv');
+    
+    }
+
+public function entrancexml(){
+    return view('entrances.index',compact('entrances'));
+}
 }

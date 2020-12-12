@@ -5,7 +5,7 @@
      <div class="row">
         <div class="col-sm-10"><h1>Agregar articulos<h1></div>
         <div class="col-sm-2">
-            <a href="{{ route('consumables.index') }}">
+            <a href="{{ route('consumablesindex') }}">
                 <button class="btn btn-secondary">Cancelar</button>
             </a>
         </div>

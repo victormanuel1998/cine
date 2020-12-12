@@ -15,7 +15,7 @@
     </div>
 
 
-    <div class="jumbotron">
+    <div class="col-8">
         <form action="{{ route('functions.store') }}" enctype="multipart/form-data" method="POST">
         @csrf 
             <div>
@@ -44,7 +44,7 @@
                 </div>
                 <div>
                     <!-- <input class="btn btn-primary" type="submit" value="Guardar"> -->
-                    <button class="btn btn-primary" >Guardar</button>
+                    <button class="btn btn-danger" >Guardar</button>
                 </div>
         </form>
     </div>

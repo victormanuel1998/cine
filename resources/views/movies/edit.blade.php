@@ -51,7 +51,14 @@
                     <option value="0">No disponible</option>
                 </select>
             </div>
-
+            <div>
+                <label for="">Actor:</label>
+                <input class="form-control" type="datetime" value="{{ $movie->created_at }}" name="created_at" id="" required >
+            </div>
+            <div>
+                <label for="">Actor:</label>
+                <input class="form-control" type="datetime" value="{{ $movie->updated_at }}" name="updated_at" id="" required >
+            </div>
             <br><br>
 
             <input class="btn btn-primary" type="submit" value="Guardar cambios">

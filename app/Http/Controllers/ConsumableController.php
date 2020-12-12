@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Consumable;
+use Barryvdh\DomPDF\Facade;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\ConsumableExport;
+
 
 class ConsumableController extends Controller
 {
@@ -13,9 +17,9 @@ class ConsumableController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $consumables = DB::table('consumables')->paginate(5);
+        $consumables = Consumable::select('*')->get();
         return view('consumables.index', compact('consumables'));
     }
 
@@ -102,4 +106,34 @@ class ConsumableController extends Controller
         $consumable ->delete();
         return redirect()->route('consumables.index');
     }
+    public function exportPDF()
+    {
+        //aqui cambiaras loque es la varaible y el modelo que usas de ahi todo es igual
+        $consumables = Consumable::get();
+        //de porsi marca error
+        $pdf = Facade::loadView('consumables.exportPDF', compact('consumables'));
+        //línea para descargar PDF directamente
+        //return $pdf->download('proveedores.pdf');
+        $pdf->setPaper('x4', 'landscape');
+        //linea para descargar PDF con autorización del usuario
+        return $pdf->stream();
+
+        //para cambiar a horizontal la hoja
+        //$pdf->setPaper('x4','landscape');
+        //return $pdf->stream(); 
+
+    }
+    public function exportToXls(){
+        $consumables = Consumable::get();
+        return Excel::download(new ConsumableExport, 'consumables.xlsx');
+    
+    }
+    public function exportToCsv(){
+    
+        return Excel::download(new ConsumableExport, 'consumables.csv');
+    
+    }public function consumablexml(){
+        return view('consumables.index',compact('consumables'));
+    }
 }
+
